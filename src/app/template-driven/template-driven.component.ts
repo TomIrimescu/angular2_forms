@@ -7,7 +7,7 @@ import { NgForm } from "@angular/forms";
   selector: 'template-driven',
   templateUrl: 'template-driven.component.html',
   styles: [ `
-	.ng-invalid, .invalid {
+	.ng-invalid {
 		border: 1px solid red;
 	}
 	
