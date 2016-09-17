@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { TemplateDrivenComponent } from "./template-driven";
-import { DataDrivenComponent } from "./data-driven";
+import { TemplateDrivenComponent } from "./template-driven/template-driven.component";
+import { DataDrivenComponent } from "./data-driven/data-driven.component";
 
 import { AppComponent } from "./app.component";
 

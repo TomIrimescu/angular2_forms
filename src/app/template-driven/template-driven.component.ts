@@ -3,12 +3,11 @@ import { NgForm } from "@angular/forms";
 
 
 @Component( {
-  moduleId: module.id,
   selector: 'template-driven',
   templateUrl: 'template-driven.component.html',
   styles: [ `
-	.ng-invalid {
-		border: 1px solid red;
+	#username.ng-invalid, #email.ng-invalid, #password.ng-invalid {
+		border: 1px solid hotpink;
 	}
 	
 	.invalid-msg {

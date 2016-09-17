@@ -16,7 +16,7 @@
                    id="email"
                    placeholder="Your email"
                    formControlName="email">
-            <div *ngIf="!myForm.find(['userData','email']).valid" class="invalid-msg">
+            <div *ngIf="!myForm.controls['userData'].controls['email'].valid" class="invalid-msg">
                 Invalid Email
             </div>
         </div>
@@ -41,7 +41,7 @@
     <div formArrayName="hobbies">
         <h3>Hobbies</h3>
         <div class="form-group"
-             *ngFor="let hobby of myForm.find('hobbies').controls; let i = index">
+             *ngFor="let hobby of myForm.controls['hobbies'].controls; let i = index">
             <input type="text"
                    class="form-control"
                    formControlName="{{i}}">

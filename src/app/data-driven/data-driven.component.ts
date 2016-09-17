@@ -1,20 +1,19 @@
 import { Component } from '@angular/core';
 import {
-    FormGroup,
-    FormControl,
-    Validators,
-    FormArray,
-    FormBuilder
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder,
+  FormArray
 } from "@angular/forms";
-import { Observable } from "rxjs";
+import { Observable } from "rxjs/Rx";
 
 
 @Component({
-  moduleId: module.id,
   selector: 'data-driven',
   templateUrl: 'data-driven.component.html',
   styles: [ `
-	.ng-invalid {
+	#username.ng-invalid,#email.ng-invalid, #password.ng-invalid  {
 		border: 1px solid hotpink;
 	}
 	
@@ -70,8 +69,8 @@ export class DataDrivenComponent {
     );
   }
 
-  onAddHobby(){
-    (<FormArray>this.myForm.find('hobbies')).push(new FormControl('', Validators.required, this.asyncExampleValidator));
+  onAddHobby() {
+    (<FormArray>this.myForm.controls['hobbies']).push(new FormControl('', Validators.required, this.asyncExampleValidator));
   }
 
   onSubmit() {
