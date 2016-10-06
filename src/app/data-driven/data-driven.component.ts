@@ -13,12 +13,12 @@ import { Observable } from "rxjs/Rx";
   selector: 'data-driven',
   templateUrl: 'data-driven.component.html',
   styles: [ `
-	#username.ng-invalid,#email.ng-invalid, #password.ng-invalid  {
+	#username.ng-invalid.ng-touched, #email.ng-invalid.ng-touched, #password.ng-invalid.ng-touched  {
 		border: 1px solid hotpink;
 	}
 	
 	.invalid-msg {
-		color: red;
+		color: hotpink;
 		padding-top: 5px;
 	}
 ` ]
